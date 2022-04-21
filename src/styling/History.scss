@@ -1,0 +1,23 @@
+.history {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  right: 0;
+
+  width: 20%;
+
+  table {
+    margin-top: 1rem;
+  }
+
+  table,
+  thead,
+  tr,
+  td,
+  th {
+    border: 1px solid #333;
+  }
+}
