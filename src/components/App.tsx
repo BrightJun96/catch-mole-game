@@ -3,6 +3,7 @@ import "../styling/App.scss";
 import Mole from "./Mole";
 import History from "./History";
 import { useState } from "react";
+import Timer from "./Timer";
 export interface RecordType {
   location: number;
   timeStamp: number;
@@ -15,14 +16,17 @@ function App() {
     setScore((score) => score + 1);
   };
 
-  console.log(recordList);
-
   const moleList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   return (
     <>
-      <h1>React-A-Mole</h1>
-      <p>score: {score}</p> {/* TODO */}
-      <div id="hh-newbie-exam">
+      <div className="top-container">
+        <div>
+          <h1>React-A-Mole</h1>
+          <h2>score: {score}</h2>
+        </div>
+        <Timer />
+      </div>
+      <div className="mole-container">
         {moleList.map((item) => (
           <Mole
             onHit={onHit}

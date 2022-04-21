@@ -1,7 +1,12 @@
-#hh-newbie-exam {
+.top-container {
+  width: 800px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mole-container {
   width: 80%;
   height: 80%;
-
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;

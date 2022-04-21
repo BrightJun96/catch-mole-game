@@ -38,7 +38,7 @@ const Mole: React.FunctionComponent<MoleProps> = ({
   );
 
   return (
-    <div className="mole-container">
+    <div className="mole-box">
       <div className="mole-cell">{content}</div>
     </div>
   );
