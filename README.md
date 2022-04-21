@@ -1,6 +1,6 @@
 # 두더지 잡기 게임
 
-**Watch Project** | https://app.netlify.com/sites/catch-mole-byjun/overview
+**Watch Project** | https://app.netlify.com/sites/catch-mole-byjun/
 
 **Tech** | React , TypeScript
 
