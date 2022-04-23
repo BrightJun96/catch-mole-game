@@ -101,3 +101,26 @@ if (restTime === 0) {
   clearTimeout(timer);
 }
 ```
+
+### recordList의 key값
+
+recordList는 **두더지의 좌표와 잡은 시간을 알려주는 상태값**이다.
+History 컴포넌트에서는 이 기록들을 mapping해야한다.
+mapping을 위한 **각 요소에 대한 key값은 유니크**해야하므로 **uuid 라이브러리**를 사용하여 id값에 할당한다.
+
+**Mole.tsx**
+
+```tsx
+
+import { v4 as uuidv4 } from "uuid";
+
+
+    const newRecordList = recordList.concat({
+      id: uuidv4(),
+      location: item,
+      timeStamp: restTime,
+    });
+    setRecordList(newRecordList);
+  }, [onHit, clearMole, item, recordList, setRecordList, restTime]);
+
+```

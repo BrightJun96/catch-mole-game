@@ -7,14 +7,12 @@ interface HistoryProps {
 }
 
 const History: React.FunctionComponent<HistoryProps> = ({ recordList }) => {
-  // TODO
-
   const [text, setText] = useState<string>("");
+
   const onChange: React.ChangeEventHandler<HTMLInputElement> = (e) =>
     setText(e.target.value);
   return (
     <div className="history">
-      {/* TODO */}
       <label htmlFor="record">
         Filter
         <input type="text" name="record" value={text} onChange={onChange} />
@@ -23,24 +21,23 @@ const History: React.FunctionComponent<HistoryProps> = ({ recordList }) => {
         <thead>
           <tr>
             <th>두더지 좌표</th>
-            <th>경과 시간</th>
+            <th>잡은 시간</th>
           </tr>
         </thead>
         <tbody>
           {recordList
             .sort((a, b) => {
-              return b.timeStamp - a.timeStamp;
+              return a.timeStamp - b.timeStamp;
             })
             .filter((record) => {
               if (text === "") return true;
               return record.location.toString() === text;
             })
             .map((record) => {
-              const elaspedTime = (Date.now() - record.timeStamp) / 1000;
               return (
-                <tr key={record.timeStamp}>
-                  <td>{record.location}</td>
-                  <td>{elaspedTime}</td>
+                <tr key={record.id}>
+                  <td>{record.location} 번</td>
+                  <td>{15 - record.timeStamp}초</td>
                 </tr>
               );
             })}

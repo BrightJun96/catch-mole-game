@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, Dispatch, SetStateAction } from "react";
 import "../styling/Timer.scss";
-export interface TimerProps {}
+export interface TimerProps {
+  restTime: number;
+  setRestTime: Dispatch<SetStateAction<number>>;
+}
 
-export default function Timer(props: TimerProps) {
-  const [restTime, setRestTime] = useState<number>(15);
+export default function Timer({ restTime, setRestTime }: TimerProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setRestTime((prev) => prev - 1);
@@ -13,7 +15,6 @@ export default function Timer(props: TimerProps) {
       clearTimeout(timer);
     }
   }, [restTime]);
-  console.log("render");
 
   return (
     <div className="timer-container">
