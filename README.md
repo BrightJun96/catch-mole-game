@@ -26,7 +26,7 @@
 
 ## 기능 및 코드 설명
 
-### 타이머
+### 1. 타이머
 
 **기능**
 
@@ -102,7 +102,7 @@ if (restTime === 0) {
 }
 ```
 
-### recordList의 key값
+### 2. recordList의 key값
 
 recordList는 **두더지의 좌표와 잡은 시간을 알려주는 상태값**이다.
 History 컴포넌트에서는 이 기록들을 mapping해야한다.

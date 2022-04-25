@@ -19,14 +19,23 @@ function App() {
   };
 
   const moleList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+  const freshGame = () => {
+    window.location.reload();
+  };
+
   return (
     <>
       <div className="top-container">
         <div>
-          <h1>React-A-Mole</h1>
-          <h2>score: {score}</h2>
+          <h1>두더지를 잡아라!</h1>
+          <h2>잡은 두더지 수: {score}</h2>
         </div>
-        <Timer restTime={restTime} setRestTime={setRestTime} />
+        <Timer restTime={restTime} setRestTime={setRestTime} score={score} />
+        <h2>목표 두더지 수 : 40</h2>
+        <button style={{ cursor: "pointer" }} onClick={freshGame}>
+          다시 하기
+        </button>
       </div>
       <div className="mole-container">
         {moleList.map((item) => (
