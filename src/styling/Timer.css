@@ -1,7 +1,5 @@
 .timer-container {
   width: 150px;
-  border: 2px solid black;
-  border-radius: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

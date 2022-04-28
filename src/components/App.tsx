@@ -27,14 +27,14 @@ function App() {
   return (
     <>
       <div className="top-container">
-        <div>
-          <h1>두더지를 잡아라!</h1>
+        <div className="logo-box">
+          <h1>두더지 잡기 게임</h1>
           <h2>잡은 두더지 수: {score}</h2>
         </div>
         <Timer restTime={restTime} setRestTime={setRestTime} score={score} />
         <h2>목표 두더지 수 : 40</h2>
         <button style={{ cursor: "pointer" }} onClick={freshGame}>
-          다시 하기
+          Replay
         </button>
       </div>
       <div className="mole-container">

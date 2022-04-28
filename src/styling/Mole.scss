@@ -14,21 +14,22 @@
   right: 0;
 
   box-sizing: border-box;
-  border-radius: 20px;
-  border: 1px solid black;
+  border: none;
 }
 
 .mole-up {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: green;
+  background-color: #6d400a;
   color: white;
-  border-radius: 20px;
+  border-radius: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: grab;
-
   &:hover {
-    background-color: rgb(44, 187, 44);
+    background-color: #94580f;
   }
 }
 
@@ -36,7 +37,12 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: indianred;
-  border-radius: 20px;
+  border-radius: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #472703;
+  color: white;
+
   cursor: not-allowed;
 }

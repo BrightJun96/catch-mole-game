@@ -35,11 +35,12 @@ const Mole: React.FunctionComponent<MoleProps> = ({
 
   const content = mole ? (
     <div className="mole-up" onClick={hitMole}>
-      두더지 출현!
-      <h3>{item}번</h3>
+      <h3>{item}번 두더지</h3>
     </div>
   ) : (
-    <div className="mole-fail">Invaild</div>
+    <div className="mole-fail">
+      <h3>쏙!</h3>
+    </div>
   );
 
   return (

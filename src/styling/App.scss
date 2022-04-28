@@ -1,7 +1,26 @@
 .top-container {
-  width: 800px;
+  width: 80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .logo-box {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  button {
+    border: none;
+    outline: none;
+    width: 120px;
+    height: 70px;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 550;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(161, 161, 161);
+    }
+  }
 }
 
 .mole-container {
